@@ -1,0 +1,31 @@
+- var pricingTitle = "Pricing Plan";
+- var pricingSubtitle = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,";
+- var pricingCardsData = [
+- {title: "Free Trail", simbol: "$", pricing: "00", period: "per month"},
+- {title: "Basic", simbol: "$", pricing: "50", period: "per month"},
+- {title: "Ultimates", simbol: "$", pricing: "99", period: "per month"},
+- ];
+- var pricingDescriptionData = [{title: "30 Free Trail", subtitle: "5 Free Projects", subtitleFirst: "PHP 5 Enabled", subtitleSecond: "24/7 Suport"}];
+- var dataBtn = "Order Now";
+section.pricing#pricing
+  .pricing__content.container
+    h2.title.pricing__title.animate__animated.animate__backInUp.wow= pricingTitle
+    h3.subtitle.pricing__subtitle.animate__animated.animate__backInUp.wow= pricingSubtitle
+    .pricing__cards
+      each item in pricingCardsData
+        .pricing__cardWrap
+          .pricing__card.animate__animated.animate__fadeInUp.wow
+            .pricing__cardHead
+              h2.pricing__cardWrapTitle= item.title
+              .pricing__cardWrapPrice 
+                .pricing__cardSimbol= item.simbol
+                span.pricing__cardValue= item.pricing
+                .pricing__cardPeriod= item.period
+            .pricing__description
+              each itemDescription in pricingDescriptionData
+                .pricing__descriptionItem
+                  .pricing__descriptionTitle= itemDescription.title
+                  .pricing__descriptionSubtitle= itemDescription.subtitle
+                  .pricing__descriptionSubtitle= itemDescription.subtitleFirst
+                  .pricing__descriptionSubtitle= itemDescription.subtitleSecond
+            a(href="#").pricing__btn= dataBtn

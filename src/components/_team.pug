@@ -1,0 +1,34 @@
+- var teamTitle = "Our Team Member"
+- var teamSubtitle = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+- var cardValueArray = [ 
+- { img : 'rounded_1.png', altValue : 'general manager image', name : 'John Doe', post : 'General Manager' },
+- { img : 'rounded_2.png', altValue : 'office director image', name : 'Alexa Biru', post : 'Office Director' }, 
+- { img : 'rounded_3.png', altValue : 'admin image', name : 'Ronobir sing', post : 'Admin' }, 
+- { img : 'rounded_1.png', altValue : 'general manager image', name : 'John Doe', post : 'General Manager' },
+- { img : 'rounded_2.png', altValue : 'office director image', name : 'Alexa Biru', post : 'Office Director' }, 
+- { img : 'rounded_3.png', altValue : 'admin image', name : 'Ronobir sing', post : 'Admin' }, 
+- { img : 'rounded_1.png', altValue : 'general manager image', name : 'John Doe', post : 'General Manager' },
+- { img : 'rounded_2.png', altValue : 'office director image', name : 'Alexa Biru', post : 'Office Director' }, 
+- { img : 'rounded_3.png', altValue : 'admin image', name : 'Ronobir sing', post : 'Admin' }, 
+- ];
+- var socialIconsArray = ['fab fa-facebook-square', 'fab fa-twitter-square', 'fas fa-comments', 'fab fa-dribbble-square'];
+section.team.container#team
+  .team__content
+    h2.title.team__title.animate__animated.animate__backInUp.wow= teamTitle
+    h3.subtitle.team__subtitle.animate__animated.animate__backInUp.wow= teamSubtitle
+
+  .swiper.team__swiper
+    .swiper-wrapper
+      each cardValue in cardValueArray
+        .swiper-slide
+          .team__card.animate__animated.animate__backInUp.wow
+            .team__imgWrap
+              img(src=require('../images/' + cardValue.img), alt=cardValue.altValue).team__img
+            h2.team__name= cardValue.name
+            .team__post= cardValue.post
+            .team__list
+              each val in socialIconsArray
+                a(href="#").team__item 
+                  i(class=val).team__icon
+    .swiper-pagination
+    

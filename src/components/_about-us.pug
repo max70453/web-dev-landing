@@ -1,0 +1,18 @@
+- var aboutTitle = "About Us";
+- var aboutSubtitle = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,";
+- var aboutCardValue = [
+- {source: "internet.png", alt: "internet", cardTitle: "Awesome Icons", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor"},
+- {source: "transfer.png", alt: "transfer", cardTitle: "One Page", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor"},
+- {source: "head.png", alt: "head", cardTitle: "Fully Responsive", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor"},
+- ];
+section.about.container#about
+  .about__contant
+    h2.title.about__title.animate__animated.animate__backInUp.wow= aboutTitle
+    h3.subtitle.about__subtitle.animate__animated.animate__backInUp.wow= aboutSubtitle
+  .about__cards.animate__animated.animate__backInUp.wow
+    each item in aboutCardValue
+      .about__card
+        .about__cardWrap
+          img(src=require('../images/' + item.source), alt=item.alt).about__cardImg
+        h2.about__cardTitle= item.cardTitle
+        .about__cardDescription= item.description

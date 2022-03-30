@@ -1,0 +1,26 @@
+- var blogTitle = "Blog";
+- var blogSubtitle = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,";
+- var cardsData = [
+- {img: "rectangle_1753.png", alt: "card img", title: "SEO Quis Vestibulum", data: "14.07.17", iconText: "Development", descr: "Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..."},
+- {img: "rectangle_175.png", alt: "card img", title: "SEO Quis Vestibulum", data: "14.07.17", iconText: "Development", descr: "Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..."},
+- {img: "rectangle_17.png", alt: "card img", title: "SEO Quis Vestibulum", data: "14.07.17", iconText: "Development", descr: "Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..."},
+- ];
+- var blogButton = "MORE VIEW";
+section.blog#blog
+  .blog__content.container
+    h2.title.blog__title.animate__animated.animate__backInUp.wow= blogTitle
+    h3.subtitle.blog__subtitle.animate__animated.animate__backInUp.wow= blogSubtitle
+    .blog__cards
+      each item in cardsData
+        .blog__card.animate__animated.animate__fadeInLeft.wow
+          .blog__pic
+            img(src=require('../images/' + item.img), alt=item.alt).blog__img
+          .blog__descriptionWrap
+            a(href="#").blog__cardTitle= item.title
+            .blog__cardSubtitleWrap
+              i.fas.fa-calendar-alt.blog__iconData
+              .blog__data= item.data
+              i.far.fa-file.blog__iconFile
+              .blog__iconFileText= item.iconText
+            .blog__cardDescription= item.descr
+    a(href="#").blog__button= blogButton

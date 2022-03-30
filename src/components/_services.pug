@@ -1,0 +1,24 @@
+- var servicesTitle = "Our Services";
+- var servicesSubtitle = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,";
+- var servicesCardsArray = [
+- {img: "smartphone.png", alt: "smartphone", title: "Research", description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.", button: "READ MORE", delay: "0.5s"},
+- {img: "smartphone.png", alt: "smartphone", title: "Portfolio", description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.", button: "READ MORE", delay: "0.5s"},
+- {img: "smartphone.png", alt: "smartphone", title: "Support", description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.", button: "READ MORE", delay: "0.5s"},
+- {img: "smartphone.png", alt: "smartphone", title: "Documentation", description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.", button: "READ MORE", delay: "0.5s"},
+- {img: "smartphone.png", alt: "smartphone", title: "Development", description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.", button: "READ MORE", delay: "0.5s"},
+- {img: "smartphone.png", alt: "smartphone", title: "Design", description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.", button: "READ MORE", delay: "0.5s"},
+- ];
+section.services#services
+  .services__content.container
+    .services__head
+      h2.title.services__title.animate__animated.animate__backInUp.wow= servicesTitle
+      h3.subtitle.services__subtitle.animate__animated.animate__backInUp.wow= servicesSubtitle 
+    .services__cards
+      each servicesItem in servicesCardsArray
+        .services__card-wrap
+          .services__card(data-wow-delay=servicesItem.delay).animate__animated.animate__fadeInLeft.wow
+            .services__cardWrap
+              img(src=require("../images/" + servicesItem.img), alt=servicesItem.alt).services__cardImg
+            h2.services__cardTitle= servicesItem.title
+            .services__cardDescription= servicesItem.description 
+            a(href="#").services__btn= servicesItem.button

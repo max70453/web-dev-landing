@@ -1,0 +1,28 @@
+- var worksTitle = "Latest Works";
+- var worksSubtitle = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,";
+- var buttons = ['ALL', 'WEB DESIGN', 'UI/UX DESIGN', 'MOCKUPS'];
+- var worksCardsData = [
+- {img: "clock.png", alt: "hand watch", cardTitle: "Hand Watch", cardSubtitle: "ui/ux design"},
+- {img: "helio.png", alt: "helio", cardTitle: "Helio", cardSubtitle: "helio"},
+- {img: "underwear.png", alt: "underwear", cardTitle: "Underwear", cardSubtitle: "men's underwear"},
+- {img: "flask.png", alt: "flask", cardTitle: "Flask", cardSubtitle: "Flask thermos"},
+- {img: "bottle.png", alt: "bottle", cardTitle: "Bottle", cardSubtitle: "bottle"},
+- {img: "bag.png", alt: "bag", cardTitle: "Bug", cardSubtitle: "shopping bag"},
+- ];
+section.works
+  .works__content.container#works
+    .works__head
+      h2.title.works__title.animate__animated.animate__backInUp.wow= worksTitle
+      h3.subtitle.works__subtitle.animate__animated.animate__backInUp.wow= worksSubtitle
+    .works__wrapButtons.animate__animated.animate__fadeInBottomRight.animate__fast.wow
+      each val in buttons
+        a(href="#").works__btn= val + '  '
+    .works__cards
+      each workItem in worksCardsData
+        .works__card-wrap
+          .works__card.animate__animated.animate__pulse.animate__fast.wow
+            img(src=require('../images/' + workItem.img), alt=workItem.alt).works__cardImg
+            .works__cardContent
+              .works__cardTitle= workItem.cardTitle
+              .works__cardSubtitle= workItem.cardSubtitle
+    a(href="#").works__wiewAllBtn.animate__animated.animate__lightSpeedInRight.animate__fast.wow VIEW ALL 

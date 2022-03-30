@@ -1,0 +1,105 @@
+.pricing
+  background: $color-text-base
+  
+  &__content
+    padding-top: 8%
+    padding-bottom: 9%
+    text-align: center
+    color: $color-background-base
+  
+  &__title
+    margin-bottom: 29px
+    
+  &__subtitle
+    margin: 0 auto
+    margin-bottom: 11%
+
+  &__cards
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+
+  &__cardWrap
+    width: calc(100% / 3)
+    padding: 10px 15px
+
+    @include max-w(900)
+      width: 50%
+
+    @include max-w(550)
+      width: 85%
+    
+  &__card
+    color: $color-background-base
+    background: $color-background-base
+    width: 100%
+    padding-bottom: 30%
+
+  &__cardHead
+    background-color: #3949ab
+    clip-path: polygon(0 0, 100% 0, 100% 86%, 0% 100%)
+    text-align: center
+    padding-top: 32px
+    padding-bottom: 19%
+    margin-bottom: 14%
+
+  &__cardWrapTitle
+    font-size: 25px
+    line-height: 22px
+    margin-bottom: 11%
+
+  &__cardWrapPrice
+    display: inline-flex
+    align-items: baseline
+
+  &__cardSimbol
+    align-self: start
+    font-size: 25px
+
+  &__cardValue
+    line-height: 50px
+    font-size: 50px
+    margin-right: 6px
+
+  &__cardPeriod
+    font-size: 17px
+    
+  &__description
+
+  &__descriptionItem
+    margin-bottom: 18%
+
+  &__descriptionTitle
+    margin-bottom: 52px
+    font-size: 17px
+    line-height: 22px
+    font-weight: $font-weight-light
+    color: $color-text-base
+
+  &__descriptionSubtitle
+    padding-bottom: 10px
+    border-bottom: 1px solid $color-text-base
+    display: inline-block
+    width: 190px
+    margin-bottom: 37px
+    font-size: 17px
+    line-height: 22px
+    font-weight: $font-weight-light
+    color: $color-text-base
+
+  &__btn
+    padding: 23px 33px
+    margin-bottom: 63px
+    font-size: 20px
+    line-height: 22px
+    font-weight: $font-weight-semi-bold
+    text-transform: uppercase
+    color: $color-text-base
+    border: 2px solid $color-text-base
+
+    &:hover
+      background-color: $hover-button-color
+      border: none
+      color: $color-background-base
+      transition: all 0.3s ease-in-out 0s

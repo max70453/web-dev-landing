@@ -1,0 +1,31 @@
+html {
+  font-family: $font-family-base;
+  font-weight: $font-weight-normal;
+  color: $color-text-base;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 1170px;
+  margin: auto;
+}
+
+
+
+

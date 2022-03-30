@@ -1,0 +1,75 @@
+.team
+  padding-top: 8.5%
+  padding-bottom: 8%
+
+  &__content
+    text-align: center
+    margin-bottom: 11%
+
+  &__title
+    margin-bottom: 36px
+    color: $color-text-base
+
+  &__subtitle
+    margin: 0 auto
+    color: $color-text-base
+
+  &__card
+    width: 100%
+    max-width: 370px
+    text-align: center
+    margin: 0 auto
+
+  &__imgWrap
+    margin-bottom: 38px
+
+  &__img
+
+  &__name
+    font-size: 20px
+    line-height: 22px
+    margin-bottom: 12px
+    font-weight: $font-weight-semi-bold
+    color: $color-text-base
+
+  &__post
+    font-size: 15px
+    line-height: 22px
+    margin-bottom: 30px
+    color: $color-text-base
+
+  &__list
+    margin: 0 -13px
+
+  &__item
+    padding: 0 13px
+
+    @include max-w(768)
+      padding: 0 5px
+    
+  &__icon
+    font-size: 30px
+    color: $hover-button-color
+
+    &:hover
+      color: $hover-social-color
+      transition: all 0.3s ease-in-out 0.1s
+
+  .team__swiper
+    padding: 0 15px 11%
+
+  .swiper-pagination-bullet
+    width: 15px
+    height: 15px
+    border-radius: 50%
+    margin-bottom: 11%
+    cursor: pointer
+    background-color: $hover-button-color
+    opacity: 1
+
+  .swiper-pagination-bullet-active
+    background: #3949ab
+
+  .swiper-pagination
+    bottom: 100px
+

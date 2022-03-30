@@ -1,0 +1,116 @@
+.blog
+  background-color: $background-color
+
+  &__content
+    text-align: center
+    padding: 9% 0
+    color: $color-text-base
+
+  &__title
+    margin-bottom: 29px
+
+  &__subtitle
+    margin: 0 auto
+    margin-bottom: 11%
+
+  &__cards
+    padding: 0 15px
+    margin-bottom: 10%
+
+  &__card
+    display: flex
+
+    &:nth-child(2n)
+      flex-flow: row-reverse
+
+      .blog__pic
+        padding-right: 0
+
+    @include max-w(768)
+      display: block
+      text-align: center
+
+  &__pic
+    width: 50%
+    padding-right: 30px
+
+    @include max-w(768)
+      width: 100%
+      padding: 0
+
+  &__img
+    
+  &__descriptionWrap
+    text-align: left
+    width: 50%
+    padding-top: 61px
+    padding-bottom: 10px
+
+    @include max-w(768)
+      width: 100%
+      text-align: center
+
+  &__cardTitle
+    display: block
+    margin-bottom: 28px
+    font-size: 25px
+    line-height: 22px
+    font-weight: $font-weight-semi-bold
+    letter-spacing: 0.05em
+    color: $color-text-base
+
+    &:hover
+      color: $hover-button-color
+      transition: all 0.3s ease-in-out 0s
+
+  &__cardSubtitleWrap
+    display: inline-flex
+    margin-bottom: 32px
+
+  &__iconData
+    font-size: 17px
+    margin-right: 13px
+
+  &__data
+    font-size: 17px
+    line-height: 22px
+    margin-right: 40px
+    font-weight: $font-weight-semi-bold
+
+  &__iconFile
+    font-size: 17px
+    margin-right: 13px
+
+  &__iconFileText
+    font-size: 17px
+    line-height: 22px
+    font-weight: $font-weight-semi-bold
+
+  &__cardDescription
+    width: 100%
+    max-width: 450px
+    font-size: 15px
+    line-height: 22px
+
+    @include max-w(768)
+      margin: 0 auto
+
+  &__button
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 auto
+    width: 220px
+    height: 70px
+    font-family: Roboto
+    font-size: 20px
+    line-height: 22px
+    font-weight: $font-weight-bold
+    border: 2px solid $color-text-base
+    color: $color-text-base
+
+    &:hover
+      border: none
+      background-color: $hover-button-color
+      color: $color-background-base
+      transition: all 0.3s

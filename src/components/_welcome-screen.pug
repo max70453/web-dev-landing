@@ -1,0 +1,12 @@
+- var title = "Web development project";
+- var subtitle = "Very suitable to support all web development projects";
+- var servicesBtn = "OUR SERVICES";
+- var nowBtn = "HIRE IS NOW";
+section.welcome-screen#welcome.wow
+  .welcome-screen__content.container
+    h1.welcome-screen__title= title
+    h2.welcome-screen__subtitle= subtitle
+    .welcome-screen__wrap
+      a(href="#").welcome-screen__btn.animate__animated.animate__backInLeft= servicesBtn
+      a(href="#").welcome-screen__btn.animate__animated.animate__backInRight= nowBtn 
+    i.fas.fa-chevron-down.welcome-screen__arrow

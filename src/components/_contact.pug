@@ -1,0 +1,26 @@
+- var title = "Contact Us";
+- var subtitle = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,";
+- var description = "Nobinagar savar,Dhaka Bangladesh";
+- var number = "+8801743331996 +8801928737807";
+- var email = "quickmasud@gmail.com quickmasud@yahoo.com";
+section.contact#contact
+  .contact__content.container
+    h2.title.contact__title= title
+    h3.subtitle.contact__subtitle= subtitle
+    .contact__cards
+      .contact__card
+        .contact__card-img.contact__location
+        .contact__locationDescription= description
+      .contact__card
+        .contact__card-img.contact__telephone
+        .contact__locationDescription= number
+      .contact__card
+        .contact__card-img.contact__email
+        .contact__locationDescription= email
+    form(action="contact.php", method="post").contact__form
+      .contact__input-wrap
+        input(type="text", placeholder="Your Name", name="name", value="").contact__input.contact__name
+      .contact__input-wrap
+        input(type="email", placeholder="Your Email", name="email", value="").contact__input.contact__email
+      textarea(placeholder="Write Massage" name="message").contact__textarea
+      input(type="submit", value="SEND").contact__button

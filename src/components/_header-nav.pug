@@ -1,0 +1,33 @@
+- var imgSource = {imgLogo: "logo.png", altLogo: "logo img"};
+- var imgBurger = {img: "burger.png", alt: "burger-menu img"};
+- var navMenu = [
+- {link: 'Home', href: '#welcome'},
+- {link: 'About', href: '#about'},
+- {link: 'Servicing', href: '#services'}, 
+- {link: 'Portfolio', href: '#works'},
+- {link: 'Pricing', href: '#pricing'},
+- {link: 'Team', href: '#team'},
+- {link: 'Blog', href: '#blog'},
+- {link: 'Contact us', href: '#contact'}
+- ];
+header.header
+  .header__content.container
+    .header__logo
+      img(src=require('../images/' + imgSource.imgLogo), alt=imgSource.altLogo).header__img
+    nav.header__nav#menu
+      each val in navMenu
+        a(href=val.href).header__link= val.link + ' '
+    .header__menu-mobile 
+      .header__iconCloseWrap
+        i.fas.fa-times
+      nav.header__nav-mobile
+        ul.header__menu-list
+          each val in navMenu 
+            li.header__menu-item
+              a(href=val.href).header__link= val.link + ' '
+    .header__burger
+      img(src=require('../images/' + imgBurger.img), alt=imgBurger.alt).header__img
+    .header__search
+      i.fas.fa-search.header__icon
+      form(action="search.php" method="get").headerSerarchForm
+        input(name="s" placeholder="Искать здесь..." type="search").header__inputSearch

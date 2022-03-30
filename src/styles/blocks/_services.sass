@@ -1,0 +1,98 @@
+.services
+  background: $background-color
+
+  &__content
+    padding-top: 12%
+    padding-bottom: 7%
+  
+  &__head
+    text-align: center
+    line-height: 22px
+    
+  &__title
+    margin-bottom: 36px
+    color: $color-text-base
+
+  &__subtitle
+    margin: 0 auto
+    margin-bottom: 9.5%
+    color: $color-text-base
+
+  &__cards
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+
+  &__card-wrap
+    width: calc(100% / 3)
+    padding: 0 15px
+    
+    @include max-w(900)
+      width: 50%
+
+    @include max-w(650)
+      width: 100%
+
+  &__card
+    background: $color-background-base
+    padding: 50px
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 30px
+    width: 100%
+    color: $color-text-base
+
+    &:hover
+      background: $hover-button-color
+      color: $color-background-base
+      transition: all 0.3s ease-in-out 0s
+
+      .services__btn
+        color: $color-background-base
+        border: 2px solid $color-background-base
+        transition: all 0.3s ease-in-out 0s
+
+      .services__cardImg
+        filter: invert(100%)
+        transition: all 0.3s ease-in-out 0s
+
+  &__cardWrap
+    width: 56px
+    margin-bottom: 38px
+
+  &__cardImg
+
+  &__cardTitle
+    font-size: 20px
+    line-height: 22px
+    margin-bottom: 26px
+    font-weight: $font-weight-semi-bold
+
+  &__cardDescription
+    text-align: center
+    font-size: 15px
+    line-height: 25px
+    margin-bottom: 44px
+    display: -webkit-box
+    -webkit-line-clamp: 4
+    -webkit-box-orient: vertical
+    overflow: hidden
+    text-overflow: ellipsis
+
+  &__btn
+    width: 150px
+    height: 55px
+    border: 2px solid $color-text-base
+    color: $color-text-base
+    font-weight: $font-weight-semi-bold
+    font-size: 20px
+    line-height: 22px
+    display: flex
+    align-items: center
+    justify-content: center
+    overflow: hidden
+
+
+      

@@ -1,0 +1,82 @@
+.welcome-screen
+  background: url('../images/pexels_photo.jpg') no-repeat center
+  padding: 15% 10px 6% 10px
+  background-size: cover
+
+  &__content
+    text-align: center
+
+  &__title
+    font-size: 60px
+    font-weight: $font-weight-semi-bold
+    margin-bottom: 26px
+    color: $color-background-base
+
+    @include max-w(810)
+      font-size: 50px
+
+    @include max-w (660)
+      font-size: 40px
+
+    @include max-w (520)
+      font-size: 30px
+      line-height: 35px
+
+  &__subtitle
+    margin-bottom: 9.3%
+    font-size: 22px
+    line-height: 22px
+    color: $color-background-base
+
+    @include max-w (660)
+      font-size: 13px
+
+  &__wrap
+    display: inline-flex
+    margin-bottom: 16.5%
+    justify-content: center
+
+    @include max-w(560)
+      width: 60%
+
+    @include max-w (490)
+      flex-wrap: wrap
+
+  &__btn
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-right: 25px
+    cursor: pointer
+    width: 220px
+    height: 70px
+    border: 3px solid #f8f8f8
+    font-family: Roboto
+    font-size: 20px
+    line-height: 22px
+    font-weight: $font-weight-bold
+    letter-spacing: 0.05em
+    color: $color-background-base
+    transition: all 0.2s ease-in-out 0s
+
+    &:hover
+      background-color: $hover-button-color
+      border: none
+      transition: all 0.3s ease-in-out 0s
+
+    @include max-w (560)
+      font-size: 15px
+    
+    @include max-w (490)
+      margin-bottom: 15px
+      margin-right: 0
+
+    &:last-child
+      margin-right: 0
+
+  &__arrow
+    font-size: 25px
+    display: block
+    margin: 0 auto
+    color: $color-background-base
+    cursor: pointer
